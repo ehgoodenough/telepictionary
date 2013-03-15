@@ -1,7 +1,7 @@
 <?php
 if(empty($_COOKIE['telepictionary']))
 {
-	setcookie( 'telepictionary', 'text', time() + 60, "/", "localhost");
+	setcookie('telepictionary', 'text', time() + 60, '/', 'localhost');
 }
 ?>
 
@@ -10,7 +10,16 @@ if(empty($_COOKIE['telepictionary']))
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<input id="@" type="text"/>
+<?php
+if($_COOKIE['telepictionary'] == 'text')
+{
+	echo '<canvas id="&" width="480px" height="360px"></canvas>';
+}
+else if($_COOKIE['telepictionary'] == 'image')
+{
+	echo '<input id="&" type="text"/>';
+}
+?>
 <button onclick="submitInformation()">Submit</button>
 </body>
 </html>

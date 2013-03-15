@@ -14,6 +14,7 @@ if(empty($_COOKIE['telepictionary']))
 if($_COOKIE['telepictionary'] == 'text')
 {
 	echo '<canvas id="&" width="480px" height="360px"></canvas>';
+	echo '<script>manageScribbling()</script>';
 }
 else if($_COOKIE['telepictionary'] == 'image')
 {

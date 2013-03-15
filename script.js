@@ -1,3 +1,5 @@
+window.addEventListener("load", manageScribbling, false);
+
 function manageScribbling()
 {
 	var isScribbling = false;
@@ -21,14 +23,15 @@ function manageScribbling()
 		sigmaX = thetaX; sigmaY = thetaY;
 		
 		thetaX = event.clientX - canvas.offsetLeft - 1;
-		thetaY = event.clientY - canvas.offsetLeft - 1;
+		thetaY = event.clientY - canvas.offsetTop - 1;
 		
 		if(isScribbling)
 		{
 			context.strokeStyle = "#FA00AF";
 			context.lineCap = "round";
 			context.lineWidth = 5;
-
+			
+			console.log("!");
 			context.beginPath();
 			context.moveTo(sigmaX, sigmaY);
 			context.lineTo(thetaX, thetaY);

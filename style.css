@@ -30,3 +30,12 @@ border-style:solid;
 border-color:#000000;
 background-color:#EEE;
 }
+
+button
+{
+width:240px;
+display:block;
+font-size:32px;
+font-weight:bold;
+margin:25px auto;
+}

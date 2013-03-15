@@ -1,5 +1,9 @@
-window.addEventListener("load", function()
+function manageScribbling()
 {
+	var isScribbling = false;
+	var sigmaX = 0, sigmaY = 0;
+	var thetaX = 0, thetaY = 0;
+	
 	var canvas, context;
 	canvas = document.getElementById("&");
 	context = canvas.getContext("2d");
@@ -11,10 +15,6 @@ window.addEventListener("load", function()
 	
 	function beginScribbling(event) {continueScribbling(event); isScribbling = true;}
 	function quitScribbling(event) {continueScribbling(event); isScribbling = false;}
-	
-	var isScribbling = false;
-	var sigmaX = 0, sigmaY = 0;
-	var thetaX = 0, thetaY = 0;
 	
 	function continueScribbling(event)
 	{
@@ -35,4 +35,4 @@ window.addEventListener("load", function()
 			context.stroke();
 		}
 	}
-}, false);
+}

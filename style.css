@@ -4,3 +4,11 @@ margin:25px;
 font-family:Calibri;
 background-color:#C0C0C0;
 }
+
+canvas
+{
+border-width:2px;
+border-style:solid;
+border-color:#000000;
+background-color:#EEE;
+}

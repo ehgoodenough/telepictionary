@@ -36,3 +36,13 @@ function manageScribbling()
 		}
 	}
 }
+
+function submitInformation()
+{
+	var cookie = decodeURIComponent(document.cookie.match("(^|;)[\s]*telepictionary=([^;]*)")[2]);
+	
+	if(cookie == "image") {document.cookie = "telepictionary=text; max-age=60; path=/; domain=localhost";}
+	else if(cookie == "text") {document.cookie = "telepictionary=image; max-age=60; path=/; domain=localhost";}
+	
+	console.log(document.cookie);
+}

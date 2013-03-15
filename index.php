@@ -11,6 +11,6 @@ if(empty($_COOKIE['telepictionary']))
 </head>
 <body>
 <input id="@" type="text"/>
-<button>Submit</button>
+<button onclick="submitInformation()">Submit</button>
 </body>
 </html>

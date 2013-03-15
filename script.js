@@ -14,25 +14,25 @@ window.addEventListener("load", function()
 	function quitScribbling(event) {continueScribbling(event); isScribbling = false;}
 	
 	var isScribbling = false;
-	var sigmax = 0, sigmay = 0;
-	var thetax = 0, thetay = 0;
+	var sigmaX = 0, sigmaY = 0;
+	var thetaX = 0, thetaY = 0;
 	
 	function continueScribbling(event)
 	{
 		if(isScribbling)
 		{
-			sigmax = thetax; sigmay = thetay;
+			sigmaX = thetaX; sigmaY = thetaY;
 			
-			thetax = event.clientX;
-			thetay = event.clientY;
+			thetaX = event.clientX;
+			thetaY = event.clientY;
 			
 			context.strokeStyle = "#FA00AF";
 			context.lineCap = "round";
 			context.lineWidth = 5;
 
 			context.beginPath();
-			context.moveTo(sigmax, sigmay);
-			context.lineTo(thetax, thetay);
+			context.moveTo(sigmaX, sigmaY);
+			context.lineTo(thetaX, thetaY);
 			context.stroke();
 		}
 	}

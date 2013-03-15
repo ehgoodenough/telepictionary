@@ -1,7 +1,6 @@
-var canvas, context;
-
 window.addEventListener("load", function()
 {
+	var canvas, context;
 	canvas = document.getElementById("&");
 	context = canvas.getContext("2d");
 	

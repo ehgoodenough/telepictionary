@@ -7,7 +7,9 @@ background-color:#C0C0C0;
 
 canvas
 {
+display:block;
 cursor:pointer;
+margin:25px auto;
 border-width:2px;
 border-style:solid;
 border-color:#000000;

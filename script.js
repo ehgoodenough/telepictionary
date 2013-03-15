@@ -19,13 +19,13 @@ window.addEventListener("load", function()
 	
 	function continueScribbling(event)
 	{
+		sigmaX = thetaX; sigmaY = thetaY;
+		
+		thetaX = event.clientX - canvas.offsetLeft - 1;
+		thetaY = event.clientY - canvas.offsetLeft - 1;
+		
 		if(isScribbling)
 		{
-			sigmaX = thetaX; sigmaY = thetaY;
-			
-			thetaX = event.clientX - canvas.offsetLeft - 1;
-			thetaY = event.clientY - canvas.offsetLeft - 1;
-			
 			context.strokeStyle = "#FA00AF";
 			context.lineCap = "round";
 			context.lineWidth = 5;

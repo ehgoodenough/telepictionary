@@ -39,3 +39,17 @@ font-size:32px;
 font-weight:bold;
 margin:25px auto;
 }
+
+p
+{
+width:480px;
+font-size:21px;
+text-indent:3em;
+margin:25px auto;
+text-align:justify;
+}
+
+p > a
+{
+color:inherit;
+}

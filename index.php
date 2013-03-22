@@ -6,6 +6,13 @@ if(empty($_COOKIE['telepictionary']))
 }
 ?>
 
+<?php
+$username = "root"; $password = "";
+$dsn = "mysql:host=localhost;dbname=telepictionary";
+try {$db = new PDO($dsn, $username, $password);}
+catch(PDOException $e) {die($e->getMessage());}
+?>
+
 <!DOCTYPE html><head><html><title>Telepictionary</title>
 <script type="text/javascript" src="script.js"></script>
 <link rel="stylesheet" type="text/css" href="style.css"/>

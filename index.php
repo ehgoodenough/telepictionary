@@ -19,7 +19,7 @@ if($_COOKIE['telepictionary'] == 'text')
 }
 else if($_COOKIE['telepictionary'] == 'image')
 {
-	echo '<input id="&" type="text"/>';
+	echo '<input id="&" type="text" maxlength="25" autofocus/>';
 }
 ?>
 <button onclick="submitInformation()">Submit</button>

@@ -18,4 +18,4 @@ INSERT INTO telebits(refnum, source, type) VALUES(3, "3242433.png", 'image');
 INSERT INTO telebits(refnum, source, type) VALUES(4, "Where is my mom?", 'text');
 INSERT INTO telebits(refnum, source, type) VALUES(4, "Who are you..?", 'text');
 INSERT INTO telebits(refnum, source, type) VALUES(4, "Ask me anything!", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(5, "3242434", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(5, "3242434.png", 'image');

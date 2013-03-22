@@ -5,6 +5,33 @@ font-family:Calibri;
 background-color:#C0C0C0;
 }
 
+div
+{
+width:470px;
+padding:5px;
+display:block;
+font-size:32px;
+font-weight:bold;
+margin:25px auto;
+border-width:2px;
+border-radius:9px;
+border-style:solid;
+border-color:#000000;
+background-color:#EEE;
+}
+
+img
+{
+width:480px;
+display:block;
+margin:25px auto;
+border-width:2px;
+border-radius:9px;
+border-style:solid;
+border-color:#000000;
+background-color:#EEE;
+}
+
 canvas
 {
 display:block;

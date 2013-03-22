@@ -19,13 +19,20 @@ catch(PDOException $e) {die($e->getMessage());}
 </head>
 <body>
 <?php
+$telebits = 'SELECT * FROM telebits WHERE idnum NOT IN (SELECT refnum FROM telebits)';
+$telebits = $db->query($telebits . 'AND type = "' . $_COOKIE['telepictionary'] . '"');
+
+$telebit = $telebits->fetch(PDO::FETCH_ASSOC);
+
 if($_COOKIE['telepictionary'] == 'text')
 {
+	echo '<div>' . $telebit['source'] . '</div>';
 	echo '<canvas id="&" width="480px" height="360px"></canvas>';
 	echo '<script>manageScribbling()</script>';
 }
 else if($_COOKIE['telepictionary'] == 'image')
 {
+	echo '<img src="' . $telebit['source'] . '"/>';
 	echo '<input id="&" type="text" maxlength="25" autofocus/>';
 }
 ?>

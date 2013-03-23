@@ -47,5 +47,20 @@ function submitInformation()
 	if(cookie == "image") {document.cookie = "telepictionary=text; max-age=60;";}
 	else if(cookie == "text") {document.cookie = "telepictionary=image; max-age=60;";}
 	
+	var ajax = new XMLHttpRequest();
+	ajax.open("POST", "upload.php", false);
+	
+	ajax.setRequestHeader("Content-type", "application");
+	
+	ajax.onreadystatechange = function()
+	{
+		if (ajax.readyState == 4)
+		{
+			console.log(ajax.responseText);
+		}
+	}
+	
+	ajax.send("Oh! Hello World!");
+	
 	window.location = "/telepictionary";
 }

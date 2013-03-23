@@ -29,7 +29,6 @@ function manageScribbling()
 			context.lineCap = "round";
 			context.lineWidth = 5;
 			
-			console.log("!");
 			context.beginPath();
 			context.moveTo(sigmaX, sigmaY);
 			context.lineTo(thetaX, thetaY);

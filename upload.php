@@ -1,5 +1,5 @@
 <?php
 
-echo $GLOBALS['HTTP_RAW_POST_DATA'];
+echo $_POST['type'] . " = " . $_POST['source'];
 
 ?>

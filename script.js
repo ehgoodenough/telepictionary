@@ -39,15 +39,27 @@ function manageScribbling()
 
 function submitInformation()
 {
+	var source;
+	
 	var type = decodeURIComponent(document.cookie.match("(^|;)[\s]*telepictionary=([^;]*)")[2]);
 	
-	if(type == "image") {document.cookie = "telepictionary=text; max-age=60;";}
-	else if(type == "text") {document.cookie = "telepictionary=image; max-age=60;";}
+	if(type == "image")
+	{
+		document.cookie = "telepictionary=text; max-age=60;";
+		source = document.getElementById("&").toDataURL("image/png");
+	}
+	else if(type == "text")
+	{
+		document.cookie = "telepictionary=image; max-age=60;";
+		source = document.getElementById("&").value;
+	}
 	
 	var ajax = new XMLHttpRequest();
 	ajax.open("POST", "upload.php", false);
 	
-	ajax.setRequestHeader("Content-type", "application");
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	ajax.setRequestHeader("Content-length", source.length);
+	ajax.setRequestHeader("Connection", "close");
 	
 	ajax.onreadystatechange = function()
 	{
@@ -57,7 +69,7 @@ function submitInformation()
 		}
 	}
 	
-	ajax.send("Oh! Hello World!");
+	ajax.send("type=" + type + "&source=" + source);
 	
 	window.location = "/telepictionary";
 }

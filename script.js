@@ -1,5 +1,3 @@
-window.addEventListener("load", manageScribbling, false);
-
 function manageScribbling()
 {
 	var isScribbling = false;

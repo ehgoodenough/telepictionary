@@ -1,7 +1,7 @@
 <?php
 if(empty($_COOKIE['telepictionary']))
 {
-	setcookie('telepictionary', 'text', time() + 60 * 60 * 7);
+	setcookie('telepictionary', 'text', time() + (60 * 60 * 24 * 7));
 	header("location: /telepictionary/begin.htm");
 }
 ?>

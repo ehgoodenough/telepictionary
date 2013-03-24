@@ -45,12 +45,12 @@ function submitInformation()
 	
 	if(type == "image")
 	{
-		document.cookie = "telepictionary=text; max-age=60;";
+		document.cookie = "telepictionary=text; max-age=3600;";
 		source = document.getElementById("&").toDataURL("image/png");
 	}
 	else if(type == "text")
 	{
-		document.cookie = "telepictionary=image; max-age=60;";
+		document.cookie = "telepictionary=image; max-age=3600;";
 		source = document.getElementById("&").value;
 	}
 	

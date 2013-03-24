@@ -10,13 +10,16 @@ div
 width:470px;
 padding:5px;
 display:block;
+margin:25px auto;
+
 font-size:32px;
 font-weight:bold;
-margin:25px auto;
+
 border-width:2px;
 border-radius:9px;
 border-style:solid;
 border-color:#000000;
+
 background-color:#EEE;
 }
 
@@ -25,10 +28,12 @@ img
 width:480px;
 display:block;
 margin:25px auto;
+
 border-width:2px;
 border-radius:9px;
 border-style:solid;
 border-color:#000000;
+
 background-color:#EEE;
 }
 
@@ -37,10 +42,12 @@ canvas
 display:block;
 cursor:pointer;
 margin:25px auto;
+
 border-width:2px;
 border-radius:9px;
 border-style:solid;
 border-color:#000000;
+
 background-color:#EEE;
 }
 
@@ -51,14 +58,17 @@ input[type="text"]
 width:470px;
 padding:5px;
 display:block;
+margin:25px auto;
+
 font-size:32px;
 font-weight:bold;
 font-family:inherit;
-margin:25px auto;
+
 border-width:2px;
 border-radius:9px;
 border-style:solid;
 border-color:#000000;
+
 background-color:#EEE;
 }
 
@@ -66,19 +76,21 @@ button
 {
 width:240px;
 display:block;
+margin:25px auto;
+
 font-size:32px;
 font-weight:bold;
 font-family:inherit;
-margin:25px auto;
 }
 
 p
 {
 width:480px;
+margin:25px auto;
+
 font-size:21px;
 text-indent:3em;
 text-align:justify;
-margin:25px auto;
 }
 
 p > a

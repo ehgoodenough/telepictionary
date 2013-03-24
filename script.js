@@ -57,7 +57,9 @@ function submitInformation()
 	var ajax = new XMLHttpRequest();
 	ajax.open("POST", "upload.php", false);
 	
-	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	source = encodeURIComponent(source);
+	
+	ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded;");
 	ajax.setRequestHeader("Content-length", source.length);
 	ajax.setRequestHeader("Connection", "close");
 	

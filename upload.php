@@ -9,9 +9,11 @@ if($_POST['type'] == 'image')
 	$source = substr($source, strpos($source, ",") + 1);
 	$source = base64_decode($source);
 	
-	file_put_contents('3242435.png', $source);
+	$filename = date('YmdHis') . '.png';
 	
-	$source = '3242435.png';
+	file_put_contents($filename, $source);
+	
+	$source = $filename;
 }
 
 $username = "root"; $password = ""; $dsn = "mysql:host=localhost;dbname=telepictionary";

@@ -5,7 +5,7 @@ USE telepictionary;
 CREATE TABLE telebits
 (
 	idnum INT NOT NULL UNIQUE AUTO_INCREMENT, refnum INT NOT NULL,
-	source VARCHAR(32), type ENUM('text', 'image') NOT NULL
+	source VARCHAR(72), type ENUM('text', 'image') NOT NULL
 );
 
 ALTER TABLE telebits ADD PRIMARY KEY (idnum);

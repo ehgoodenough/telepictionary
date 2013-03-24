@@ -9,6 +9,6 @@ if($_POST['type'] == 'image')
 	file_put_contents('3242435.png', $source);
 }
 
-echo $_POST['type'] . " = " . $_POST['source'];
+echo $_POST['refnum'] . " @ " . $_POST['type'] . " = " . $_POST['source'];
 
 ?>

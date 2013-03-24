@@ -37,7 +37,7 @@ function manageScribbling()
 	}
 }
 
-function submitInformation()
+function submitInformation(refnum)
 {
 	var source;
 	
@@ -71,7 +71,7 @@ function submitInformation()
 		}
 	}
 	
-	ajax.send("type=" + type + "&source=" + source);
+	ajax.send("refnum=" + refnum + "&type=" + type + "&source=" + source);
 	
 	window.location = "/telepictionary";
 }

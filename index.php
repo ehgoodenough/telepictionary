@@ -36,7 +36,8 @@ else if($_COOKIE['telepictionary'] == 'text')
 	echo '<img src="' . $telebit['source'] . '"/>';
 	echo '<input id="&" type="text" maxlength="25" autofocus/>';
 }
+
+echo '<button onclick="submitInformation(' . $telebit['idnum'] . ')">Submit</button>';
 ?>
-<button onclick="submitInformation()">Submit</button>
 </body>
 </html>

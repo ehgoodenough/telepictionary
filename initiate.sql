@@ -11,11 +11,7 @@ CREATE TABLE telebits
 ALTER TABLE telebits ADD PRIMARY KEY (idnum);
 ALTER TABLE telebits ADD FOREIGN KEY(refnum) REFERENCES telebits(idnum);
 
-INSERT INTO telebits(refnum, source, type) VALUES(1, "That gotta hurt!", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "3242432.png", 'image');
-INSERT INTO telebits(refnum, source, type) VALUES(2, "Ow, my spine!", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(3, "3242433.png", 'image');
-INSERT INTO telebits(refnum, source, type) VALUES(4, "Where is my mom?", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(4, "Who are you..?", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(4, "Ask me anything!", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(5, "3242434.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(1, "The graves are on fire!", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(1, "20130326004440.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(1, "20130326004456.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(2, "DFBFF", 'text');

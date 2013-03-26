@@ -38,10 +38,11 @@ border-color:#000000;
 background-color:#EEE;
 }
 
-canvas
+div#\&
 {
+width:480px;
+height:360px;
 display:block;
-cursor:pointer;
 margin:25px auto;
 
 border-width:2px;
@@ -52,7 +53,12 @@ border-color:#000000;
 background-color:#EEE;
 }
 
-canvas:active {cursor:pointer;}
+div#\&\!
+{
+width:inherit;
+height:inherit;
+cursor:pointer;
+}
 
 input[type="text"]
 {

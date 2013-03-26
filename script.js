@@ -13,10 +13,6 @@ function manageScribbling()
 	var currentCanvaslayer = -1;
 	instantiateCanvaslayer();
 	
-	var canvas, context;
-	canvas = document.getElementById("&");
-	context = canvas.getContext("2d");
-	
 	frontscreen.addEventListener("mouseup", quitScribbling, false);
 	frontscreen.addEventListener("mouseout", quitScribbling, false);
 	frontscreen.addEventListener("mousedown", beginScribbling, false);
@@ -39,6 +35,10 @@ function manageScribbling()
 	
 	function continueScribbling(event)
 	{
+		var id = "&" + currentCanvaslayer;
+		var canvas = document.getElementById(id);
+		var context = canvas.getContext("2d");
+		
 		sigmaX = thetaX; sigmaY = thetaY;
 		
 		thetaX = event.clientX - canvas.offsetLeft + window.pageXOffset - 1;

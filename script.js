@@ -33,6 +33,7 @@ function manageScribbling()
 	function beginScribbling(event)
 	{
 		event.preventDefault();
+		instantiateCanvaslayer();
 		continueScribbling(event);
 		isScribbling = true;
 	}

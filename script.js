@@ -30,8 +30,18 @@ function manageScribbling()
 		backscreen.insertBefore(canvaslayer, frontscreen);
 	}
 	
-	function beginScribbling(event) {continueScribbling(event); isScribbling = true;}
-	function quitScribbling(event) {continueScribbling(event); isScribbling = false;}
+	function beginScribbling(event)
+	{
+		event.preventDefault();
+		continueScribbling(event);
+		isScribbling = true;
+	}
+	
+	function quitScribbling(event)
+	{
+		continueScribbling(event);
+		isScribbling = false;
+	}
 	
 	function continueScribbling(event)
 	{

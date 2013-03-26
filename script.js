@@ -13,6 +13,8 @@ function manageScribbling()
 	var currentCanvaslayer = -1;
 	instantiateCanvaslayer();
 	
+	window.addEventListener("keydown", eraseScribbling, false);
+	
 	frontscreen.addEventListener("mouseup", quitScribbling, false);
 	frontscreen.addEventListener("mouseout", quitScribbling, false);
 	frontscreen.addEventListener("mousedown", beginScribbling, false);
@@ -66,6 +68,15 @@ function manageScribbling()
 			context.lineTo(thetaX, thetaY);
 			context.stroke();
 		}
+	}
+	
+	function eraseScribbling()
+	{
+		if(currentCanvaslayer == 0) {return;}
+		var id = "&" + currentCanvaslayer;
+		var canvaslayer = document.getElementById(id);
+		backscreen.removeChild(canvaslayer);
+		currentCanvaslayer--;
 	}
 }
 

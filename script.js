@@ -7,6 +7,12 @@ function manageScribbling()
 	var backscreen = document.getElementById("&");
 	var frontscreen = document.getElementById("&!");
 	
+	var width = 480; //frontscreen.offsetWidth;
+	var height = 360; //frontscreen.offsetHeight;
+	
+	var currentCanvaslayer = -1;
+	instantiateCanvaslayer();
+	
 	var canvas, context;
 	canvas = document.getElementById("&");
 	context = canvas.getContext("2d");
@@ -15,6 +21,18 @@ function manageScribbling()
 	frontscreen.addEventListener("mouseout", quitScribbling, false);
 	frontscreen.addEventListener("mousedown", beginScribbling, false);
 	frontscreen.addEventListener("mousemove", continueScribbling, false);
+	
+	function instantiateCanvaslayer()
+	{
+		currentCanvaslayer++;
+		
+		canvaslayer = document.createElement("canvas");
+		canvaslayer.setAttribute("width", width + "px");
+		canvaslayer.setAttribute("height", height + "px");
+		canvaslayer.setAttribute("id", "&" + currentCanvaslayer);
+		
+		backscreen.insertBefore(canvaslayer, frontscreen);
+	}
 	
 	function beginScribbling(event) {continueScribbling(event); isScribbling = true;}
 	function quitScribbling(event) {continueScribbling(event); isScribbling = false;}

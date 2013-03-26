@@ -57,7 +57,15 @@ div#\&\!
 {
 width:inherit;
 height:inherit;
+
 cursor:pointer;
+
+position:absolute;
+}
+
+canvas
+{
+position:absolute;
 }
 
 input[type="text"]

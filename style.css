@@ -5,7 +5,7 @@ font-family:Calibri;
 background-color:#C0C0C0;
 }
 
-div
+ins
 {
 width:470px;
 padding:5px;
@@ -14,6 +14,7 @@ margin:25px auto;
 
 font-size:32px;
 font-weight:bold;
+text-decoration:none;
 
 border-width:2px;
 border-radius:9px;

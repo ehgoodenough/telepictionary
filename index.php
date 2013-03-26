@@ -27,7 +27,7 @@ $telebit = $telebits[rand(1,count($telebits)) - 1];
 
 if($_COOKIE['telepictionary'] == 'image')
 {
-	echo '<div>' . $telebit['source'] . '</div>';
+	echo '<ins>' . $telebit['source'] . '</ins>';
 	echo '<canvas id="&" width="480px" height="360px"></canvas>';
 	echo '<script>manageScribbling()</script>';
 }

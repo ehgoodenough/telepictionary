@@ -4,14 +4,17 @@ function manageScribbling()
 	var sigmaX = 0, sigmaY = 0;
 	var thetaX = 0, thetaY = 0;
 	
+	var backscreen = document.getElementById("&");
+	var frontscreen = document.getElementById("&!");
+	
 	var canvas, context;
 	canvas = document.getElementById("&");
 	context = canvas.getContext("2d");
 	
-	canvas.addEventListener("mouseup", quitScribbling, false);
-	canvas.addEventListener("mouseout", quitScribbling, false);
-	canvas.addEventListener("mousedown", beginScribbling, false);
-	canvas.addEventListener("mousemove", continueScribbling, false);
+	frontscreen.addEventListener("mouseup", quitScribbling, false);
+	frontscreen.addEventListener("mouseout", quitScribbling, false);
+	frontscreen.addEventListener("mousedown", beginScribbling, false);
+	frontscreen.addEventListener("mousemove", continueScribbling, false);
 	
 	function beginScribbling(event) {continueScribbling(event); isScribbling = true;}
 	function quitScribbling(event) {continueScribbling(event); isScribbling = false;}

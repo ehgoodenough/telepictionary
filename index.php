@@ -20,6 +20,9 @@ catch(PDOException $e) {die($e->getMessage());}
 <body>
 
 <aside>
+<span style="background-color:red">red</span>
+<span style="background-color:blue">blue</span>
+<span style="background-color:green">green</span>
 </aside>
 
 <?php

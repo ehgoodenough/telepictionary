@@ -103,7 +103,8 @@ aside
 top:0px;
 left:0px;
 bottom:0px;
-width:70px;
+width:64px;
+padding:3px;
 position:fixed;
 
 background-color:#EEE;
@@ -111,6 +112,23 @@ background-color:#EEE;
 border-right-width:2px;
 border-right-style:solid;
 border-right-color:#000000;
+}
+
+span
+{
+width:60px;
+height:60px;
+display:block;
+margin-bottom:3px;
+
+font-weight:bold;
+line-height:60px;
+text-align:center;
+
+border-width:2px;
+border-radius:9px;
+border-style:solid;
+border-color:#000000;
 }
 
 p

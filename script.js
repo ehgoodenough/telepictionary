@@ -22,6 +22,12 @@ function manageScribbling()
 	frontscreen.addEventListener("mousedown", beginScribbling, false);
 	frontscreen.addEventListener("mousemove", continueScribbling, false);
 	
+	undotag = document.createElement("span");
+	undotag.setAttribute("style", "color:white; background-color:black");
+	undotag.appendChild(document.createTextNode("UNDO"));
+	undotag.onclick = function() {eraseScribbling();};
+	document.getElementById("panel").appendChild(undotag);
+	
 	function instantiateCanvaslayer()
 	{
 		currentCanvaslayer++;

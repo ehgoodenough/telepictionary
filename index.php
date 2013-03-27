@@ -18,6 +18,10 @@ catch(PDOException $e) {die($e->getMessage());}
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
+
+<aside>
+</aside>
+
 <?php
 $telebits = 'SELECT * FROM telebits WHERE idnum NOT IN (SELECT refnum FROM telebits)';
 $telebits = $db->query($telebits . 'AND type <> "' . $_COOKIE['telepictionary'] . '"');
@@ -39,5 +43,6 @@ else if($_COOKIE['telepictionary'] == 'text')
 
 echo '<button onclick="submitInformation(' . $telebit['idnum'] . ')">Submit</button>';
 ?>
+
 </body>
 </html>

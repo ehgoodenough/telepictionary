@@ -98,6 +98,21 @@ font-weight:bold;
 font-family:inherit;
 }
 
+aside
+{
+top:0px;
+left:0px;
+bottom:0px;
+width:70px;
+position:fixed;
+
+background-color:#EEE;
+
+border-right-width:2px;
+border-right-style:solid;
+border-right-color:#000000;
+}
+
 p
 {
 width:480px;

@@ -19,11 +19,7 @@ catch(PDOException $e) {die($e->getMessage());}
 </head>
 <body>
 
-<aside>
-<span style="background-color:red">red</span>
-<span style="background-color:blue">blue</span>
-<span style="background-color:green">green</span>
-</aside>
+<aside id="panel"></aside>
 
 <?php
 $telebits = 'SELECT * FROM telebits WHERE idnum NOT IN (SELECT refnum FROM telebits)';

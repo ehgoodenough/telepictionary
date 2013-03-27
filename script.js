@@ -1,5 +1,7 @@
 function manageScribbling()
 {
+	var color = "#FA00FA";
+	
 	var isScribbling = false;
 	var sigmaX = 0, sigmaY = 0;
 	var thetaX = 0, thetaY = 0;
@@ -59,7 +61,7 @@ function manageScribbling()
 		
 		if(isScribbling)
 		{
-			context.strokeStyle = "#FA00AF";
+			context.strokeStyle = color;
 			context.lineCap = "round";
 			context.lineWidth = 5;
 			
@@ -78,6 +80,20 @@ function manageScribbling()
 		backscreen.removeChild(canvaslayer);
 		currentCanvaslayer--;
 	}
+	
+	redtag = document.createElement("span");
+	redtag.setAttribute("style", "background-color:red");
+	redtag.onclick = function() {color = "red";};
+	bluetag = document.createElement("span");
+	bluetag.setAttribute("style", "background-color:blue");
+	bluetag.onclick = function() {color = "blue";};
+	greentag = document.createElement("span");
+	greentag.setAttribute("style", "background-color:green");
+	greentag.onclick = function() {color = "green";};
+
+	document.getElementById("panel").appendChild(redtag);
+	document.getElementById("panel").appendChild(bluetag);
+	document.getElementById("panel").appendChild(greentag);
 }
 
 function submitInformation(refnum)

@@ -89,7 +89,13 @@ function submitInformation(refnum)
 	if(type == "image")
 	{
 		document.cookie = "telepictionary=text; max-age=3600;";
-		source = document.getElementById("&").toDataURL("image/png");
+		
+		var base = document.getElementById("&0").getContext("2d");
+		var layers = document.getElementById("&").childNodes;
+		for(var num = 0; num < layers.length - 1; num++)
+		{base.drawImage(layers[num], 0, 0);}
+		
+		source = document.getElementById("&0").toDataURL("image/png");
 	}
 	else if(type == "text")
 	{

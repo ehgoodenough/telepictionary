@@ -2,7 +2,7 @@ Telepictionary is a combination of both [Telephone][1] and [Pictionary][2], wher
 
 At the moment, the project is developed with JavaScript on the frontend and PHP with MySQL on the backend, but later in development, it shouldn't be too difficult to transition to either Ruby on Rails or NodeJS. In the meantime, however, the development of the project is entirely accessible from any apache serverstack, including LAMP, WAMP, MAMP, and XAMPP.
 
-The game is being developed in coordination with the [Chattanooga Game Developers][3]. If you want to contribute to the project, please fork us here on [GitHub][4]! Andi f you have any comments or questions, you can message me at either *andrewmcp333@gmail.com* or *psn719@mocs.utc.edu*, or phone me at *423-774-7782*. Thanks!
+The game is being developed in coordination with the [Chattanooga Game Developers][3]. If you want to contribute to the project, please fork us here on [GitHub][4]! Andi f you have any comments or questions, you can message me at either andrewmcp333@gmail.com or psn719@mocs.utc.edu, or phone me at 423-774-7782. Thanks!
 
   [1]: http://en.wikipedia.org/wiki/Chinese_whispers
   [2]: http://en.wikipedia.org/wiki/Pictionary

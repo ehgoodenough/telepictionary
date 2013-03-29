@@ -9,7 +9,7 @@ if($_POST['type'] == 'image')
 	$source = substr($source, strpos($source, ",") + 1);
 	$source = base64_decode($source);
 	
-	$filename = date('YmdHis') . '.png';
+	$filename = "images/" . date('YmdHis') . '.png';
 	
 	file_put_contents($filename, $source);
 	

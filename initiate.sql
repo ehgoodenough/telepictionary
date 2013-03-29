@@ -25,3 +25,13 @@ INSERT INTO telebits(refnum, source, type) VALUES(11, "DFBFF", 'text');
 INSERT INTO telebits(refnum, source, type) VALUES(12, "Rocketship to Mars", 'text');
 INSERT INTO telebits(refnum, source, type) VALUES(12, "images/20130327233404.png", 'image');
 INSERT INTO telebits(refnum, source, type) VALUES(13, "Oh no! Crashlanding!", 'text');
+
+CREATE TABLE users
+(
+	usernum INT NOT NULL UNIQUE AUTO_INCREMENT,
+	username VARCHAR(32), password VARCHAR(32)
+);
+
+ALTER TABLE users ADD PRIMARY KEY (usernum);
+
+INSERT INTO users(username, password) VALUES("Andrew", "pa55w0rd");

@@ -1,7 +1,7 @@
 <?php
-if(empty($_COOKIE['user']))
+if(empty($_COOKIE['usernum']))
 {
-	setcookie('user', 'andrew', time() + 3600);
+	setcookie('usernum', '1', time() + 3600);
 }
 
 if(empty($_COOKIE['telepictionary']))

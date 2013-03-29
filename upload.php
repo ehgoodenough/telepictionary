@@ -1,5 +1,6 @@
 <?php
 
+$usernum = $_COOKIE['usernum'];
 $refnum = $_POST['refnum'];
 $source = $_POST['source'];
 $type = $_POST['type'];
@@ -19,7 +20,7 @@ if($_POST['type'] == 'image')
 $username = "root"; $password = ""; $dsn = "mysql:host=localhost;dbname=telepictionary";
 try {$db = new PDO($dsn, $username, $password);} catch(PDOException $e) {die($e->getMessage());}
 
-$insertion = $db->prepare("INSERT INTO telebits(refnum, source, type) VALUES(:refnum, :source, :type);");
+$insertion = $db->prepare("INSERT INTO telebits(usernum, refnum, source, type) VALUES(:usernum, :refnum, :source, :type);");
 $insertion->execute(array(':refnum' => $refnum, 'source' => $source, ':type' => $type));
 
 ?>

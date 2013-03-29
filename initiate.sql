@@ -5,7 +5,8 @@ USE telepictionary;
 CREATE TABLE telebits
 (
 	idnum INT NOT NULL UNIQUE AUTO_INCREMENT, refnum INT NOT NULL,
-	source VARCHAR(72), type ENUM('text', 'image') NOT NULL
+	usernum INT NOT NULL DEFAULT 1, source VARCHAR(72),
+	type ENUM('text', 'image') NOT NULL
 );
 
 ALTER TABLE telebits ADD PRIMARY KEY (idnum);
@@ -35,3 +36,4 @@ CREATE TABLE users
 ALTER TABLE users ADD PRIMARY KEY (usernum);
 
 INSERT INTO users(username, password) VALUES("Andrew", "pa55w0rd");
+ALTER TABLE telebits ADD FOREIGN KEY(usernum) REFERENCES users(usernum);

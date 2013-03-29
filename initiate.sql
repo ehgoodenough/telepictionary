@@ -11,11 +11,17 @@ CREATE TABLE telebits
 ALTER TABLE telebits ADD PRIMARY KEY (idnum);
 ALTER TABLE telebits ADD FOREIGN KEY(refnum) REFERENCES telebits(idnum);
 
-INSERT INTO telebits(refnum, source, type) VALUES(1, "DFBFF", 'text');
 INSERT INTO telebits(refnum, source, type) VALUES(1, "Too much Pizza", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "I am a bit confused", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "The graves are on fire!", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "Upside Down Zombie", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "Stich in Time Saves Nine", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "Who has seen the wind?", 'text');
-INSERT INTO telebits(refnum, source, type) VALUES(1, "Rocket to Mars", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(2, "The graves are on fire!", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(2, "images/20130327232831.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(4, "I am a bit confused", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(5, "Upside Down Zombie", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(5, "images/20130327233131.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(7, "Stich in Time Saves Nine", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(8, "Who has seen the wind?", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(8, "images/20130327210648.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(9, "What are those squiggles?", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(11, "DFBFF", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(12, "Rocketship to Mars", 'text');
+INSERT INTO telebits(refnum, source, type) VALUES(12, "images/20130327233404.png", 'image');
+INSERT INTO telebits(refnum, source, type) VALUES(13, "Oh no! Crashlanding!", 'text');

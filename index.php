@@ -1,4 +1,9 @@
 <?php
+if(empty($_COOKIE['user']))
+{
+	setcookie('user', 'andrew', time() + 3600);
+}
+
 if(empty($_COOKIE['telepictionary']))
 {
 	setcookie('telepictionary', 'text', time() + 3600);
